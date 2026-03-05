@@ -64,7 +64,6 @@
         /* Hero Section */
         #hero {
             height: 90vh;
-            /* พื้นหลังไล่สีเข้มๆ ดูโปร เหมาะกับสาย Tech */
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
@@ -162,6 +161,25 @@
             display: block;
         }
 
+        /* --- เพิ่มเติม: ส่วนของแกลเลอรีเลื่อนภาพซ้ายขวา --- */
+        .scroll-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 15px;
+            background: #f4f4f4; /* เปลี่ยนพื้นหลังกรอบให้เข้ากับเว็บ */
+        }
+        .scroll-gallery img {
+            height: 250px;
+            width: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* ตกแต่งแถบ Scrollbar */
+        .scroll-gallery::-webkit-scrollbar { height: 8px; }
+        .scroll-gallery::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+        .scroll-gallery::-webkit-scrollbar-track { background: #ddd; }
+
         /* Contact Section */
         #contact { padding: 60px 0; background: var(--secondary-color); color: #fff; text-align: center; }
         #contact p { margin-bottom: 15px; font-size: 1.1rem; }
@@ -251,11 +269,22 @@
                 </div>
 
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x225" style="width:100%; height:auto; display:block;" alt="Graphic Work">
+                    <div class="scroll-gallery">
+                        <img src="work1.jpg" alt="Graphic Design 1">
+                        <img src="work2.jpg" alt="Graphic Design 2">
+                        <img src="work3.jpg" alt="Graphic Design 3">
+                        <img src="work4.jpg" alt="Graphic Design 4">
+                        <img src="work5.jpg" alt="Graphic Design 5">
+                        <img src="work6.jpg" alt="Graphic Design 6">
+                        <img src="work7.jpg" alt="Graphic Design 7">
+                        <img src="work8.jpg" alt="Graphic Design 8">
+                        <img src="work9.jpg" alt="Graphic Design 9">
+                        <img src="work10.jpg" alt="Graphic Design 10">
+                    </div>
                     <div class="portfolio-info">
-                        <span class="tech-stack">Graphic Design | Office</span>
-                        <h3>Graphic & General Work</h3>
-                        <p>ผลงานออกแบบกราฟิก และการจัดการเอกสารต่างๆ</p>
+                        <span class="tech-stack">Graphic Design | Photoshop | Illustrator</span>
+                        <h3>Commercial Graphic Design</h3>
+                        <p>รวมผลงานออกแบบสื่อสิ่งพิมพ์ สื่อโฆษณาออนไลน์ และคอนเทนต์ สำหรับใช้ในองค์กร (เลื่อนซ้าย-ขวาเพื่อดูรูปเพิ่มเติม) แสดงทักษะการจัดองค์ประกอบภาพ และการสื่อสารแบรนด์</p>
                     </div>
                 </div>
 
